@@ -1,0 +1,494 @@
+:root{
+    --purple: #8e44ad;
+    --red: #c0392b;
+    --orange: #f39c12;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-white: #ccc;
+    --light-bg: #f5f5f5;
+    --border: 1px solid #333;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--purple);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--purple);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--light-bg);
+}
+
+section{
+    padding: 3rem 2rem;
+}
+
+.tittle{
+    margin-left: 30px;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.empty{
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.message{
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    gap: 1.5rem;
+}
+.message span{
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+    background-color: var(--black);
+}
+
+.white-btn,
+.btn{
+    background-color: var(--purple);
+}
+
+.option-btn{
+    background-color: var(--orange);
+}
+.delete-btn{
+    background-color: var(--red);
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(1rem);
+        opacity: .2s;
+    }
+}
+
+.header{
+    position: sticky;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .flex .logo span{
+    color: var(--purple);
+}
+
+.header .flex .nav_bar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.header .flex .nav_bar a:hover{
+    color: var(--purple);
+}
+
+.header .flex .icons div {
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .flex .icons div:hover{
+    color: var(--purple);
+}
+
+.header .flex .account-box{
+    position: absolute;
+    top: 120%;right: 2rem;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    display: none;
+    animation: fadeIn .2s linear;
+    background: var(--white);
+}
+
+.header .flex .account-box.active{
+    display: inline-block;
+}
+
+.header .flex .account-box p{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.header .flex .account-box span{
+    color: var(--purple);
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+.dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.dashboard .box-container .box h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.dashboard .box-container .box p{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    font-weight: 550;
+    background-color: var(--light-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: 25px;
+    color: var(--purple);
+    font-size: 1.5rem;
+}
+
+.add-products form{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.add-products form h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+.add-products form .box{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    color: var(--black);
+    font-size: 1.8rem;
+}
+
+
+.show-products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.show-products {
+    padding-top: 0;
+}
+
+.show-products .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+}
+.show-products .box-container .box img{
+    height: 25rem;
+}
+
+.show-products .box-container .box .name{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--black);
+}
+.show-products .box-container .box .price{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: var(--red);
+}
+
+.edit-product-form{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1200;
+    width: 100%;
+}
+
+.edit-product-form form{
+    width: 50rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: var(--white);
+}
+
+.edit-product-form form img{
+    height: 25rem;
+    margin-bottom: 1rem;
+}
+
+.edit-product-form form .box{
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    box-shadow: var(--box-shadow);
+    font-size: 1.8rem;
+    color: var(--black);
+    width: 80%;
+}
+
+.orders .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.orders .box-container .box{
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.orders .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.orders .box-container .box p span{
+    color: var(--purple);
+}
+
+.orders .box-container .box form{
+    text-align: center;
+}
+
+.orders .box-container .box form select{
+    width: 100%;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    box-shadow: var(--box-shadow);
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.users .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.users .box-container .box{
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.users .box-container .box p{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.users .box-container .box p span{
+    color: var(--purple);
+}
+
+.users .box-container .box .delete-btn{
+    margin-top: 0;
+}
+
+.messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.messages .box-container .box{
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.messages .box-container .box p{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+.messages .box-container .box p span{
+    color: var(--purple);
+}
+
+.messages .box-container .box .delete-btn{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex .nav_bar{
+        position: absolute;
+        top: 99%;left: 0;right: 0;
+        background-color: var(--white);
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .nav_bar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .flex .nav_bar a{
+        margin: 2rem;
+        display: block;
+    }
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .tittle{
+        font-size: 3rem;
+    }
+}
